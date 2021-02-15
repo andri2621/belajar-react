@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+// import logo from './sharingan.png';
 import './App.css';
+import './styles/styles.css'
+import Counter from './components/Counter';
+import CounterArrow from './components/CounterArrow';
+import CounterHook from './components/CounterHook';
+import MainLayout from './container/MainLayout';
+import { BrowserRouter} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+import React, { Component } from 'react'
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <MainLayout />
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
