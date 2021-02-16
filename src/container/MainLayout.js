@@ -10,7 +10,7 @@ import List from './pages/list/List'
 import Todo from './pages/todo/Todo'
 import Error404 from './pages/Error404'
 import Footer from '../components/layout/Footer'
-import MovieList from './movies/Movies'
+import MovieList from '../components/movies/ListMovies'
 
 
 const MainLayout = () => {

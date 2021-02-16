@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Movie from './Movie'
 import {movieData} from './MovieData'
-import './Movies.css'
+import './ListMovies.css'
 
 export default class Movies extends Component {
     render() {
