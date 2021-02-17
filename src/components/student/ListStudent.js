@@ -123,7 +123,7 @@ export default class ListStudent extends Component {
                             return ('' + a.KOTA).localeCompare(b.KOTA);
                         }
                     })
-                    .sort((a, b) => b.VOTE - a.VOTE)
+                    // .sort((a, b) => b.VOTE - a.VOTE)
 
                     .map(value => {
                             return (
