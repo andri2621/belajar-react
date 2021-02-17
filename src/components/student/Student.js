@@ -6,7 +6,14 @@ import './Student.css'
 
 
 const Student = (props) => {
+
+    const handleLike = (studentNIM) => {
+        props.onLike(studentNIM);
+    };
+  
     return (
+        
+        
         <div className="kartu" style={{ backgroundImage: `url(./images/${props.foto})` }}>
             <Link to="/student">
                 
@@ -16,11 +23,13 @@ const Student = (props) => {
                     ASAL : {props.KOTA}<br></br>
                     IPK : {props.IPK}<br></br><br></br>
                     VOTE : {props.VOTE}
+                    
 
                 </div>
             </Link>
             <center>
-            <button>Vote Me</button>
+            <button onClick={()=>handleLike(props.NIM)} >Vote me
+            </button>
             </center>
         </div>
     )

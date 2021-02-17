@@ -43,6 +43,23 @@ export default class ListStudent extends Component {
     }
 
 
+    handleLike = (studentNIM) => {
+        // bisa menggunakan object spread
+        // buka kembali di ebook ecmascript tentang spread
+        this.setState({
+            students: [
+                ...this.state.students.map((value) => {
+                    if (value.NIM === studentNIM) {
+                        value.VOTE = value.VOTE + 1;
+                        return value;
+                    } else {
+                        return value;
+                    }
+                })]
+        });
+    };
+
+
     render() {
         const {students, search, select, isSelected} = this.state
         return (
@@ -64,8 +81,13 @@ export default class ListStudent extends Component {
                     //jika filter, maka false
                     !isSelected ? (
 
+
+                    
+                        
+
                     students
-                    .filter( f => f.NAMA.toLowerCase().includes(search.toLowerCase()))
+                    .filter( f =>  f.NAMA.toLowerCase().includes(search.toLowerCase()))
+                    .sort((a, b) => b.VOTE - a.VOTE)
                     .map(value => {
                         return (
                             <Student
@@ -73,7 +95,8 @@ export default class ListStudent extends Component {
                                 NAMA={value.NAMA}
                                 KOTA={value.KOTA}
                                 IPK={value.IPK}
-                                VOTE={value.VOTE}
+                            onLike={this.handleLike}
+                            VOTE={value.VOTE}
                                 foto={value.foto}
                             />
                         )
@@ -100,6 +123,8 @@ export default class ListStudent extends Component {
                             return ('' + a.KOTA).localeCompare(b.KOTA);
                         }
                     })
+                    .sort((a, b) => b.VOTE - a.VOTE)
+
                     .map(value => {
                             return (
                                 <Student
@@ -107,6 +132,9 @@ export default class ListStudent extends Component {
                                     NAMA={value.NAMA}
                                     KOTA={value.KOTA}
                                     IPK={value.IPK}
+                                    onLike={this.handleLike}
+                                    VOTE={value.VOTE}
+
                                     foto={value.foto}
                                 />
                             )
