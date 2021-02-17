@@ -11,6 +11,8 @@ import Todo from './pages/todo/Todo'
 import Error404 from './pages/Error404'
 import Footer from '../components/layout/Footer'
 import MovieList from '../components/movies/ListMovies'
+import RatingList from './rating/RatingList'
+import ListStudent from '../components/student/ListStudent';
 
 
 const MainLayout = () => {
@@ -27,6 +29,9 @@ const MainLayout = () => {
                     <Route path="/todo" component={Todo} exact />
                     <Route path="/home" component={Home} exact />
                     <Route path="/movies" component={MovieList} exact />
+                    <Route path="/rating" component={RatingList} exact />
+                    <Route path="/student" component={ListStudent} exact />
+
                     {/* <Route path="/about" component={About} exact /> */}
                     <Route component={Error404} />
                 </Switch>

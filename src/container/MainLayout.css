@@ -3,7 +3,7 @@
     display: grid;
     grid-template-areas: "header header" "side content" "footer footer";
     height: 100vh;
-    grid-template-columns: 2fr 6fr;
+    grid-template-columns: 0.8fr 6fr;
     grid-template-rows: auto 1fr auto;
     grid-gap: 1px;
 }

@@ -1,0 +1,37 @@
+{
+    "movies" : [
+    {
+    "vote_count": 10,
+    "id": 399579,
+    "video": true,
+    "vote_average": 6.7,
+    "title": "Alita: Battle Angel Women",
+    "popularity": 483.184,
+    "poster_path": "alita.jpg",
+    "original_language": "en",
+    "original_title": "Alita: Battle Angel",
+    "youtube_url": "7AtgSiMH9GI",
+    "genre_ids": [
+    28,
+    878,
+    53,
+    10749
+    ],
+  
+   "genres" : [
+    {
+    "id": 28,
+    "name": "Action"
+    },
+    {
+    "id": 12,
+    "name": "Adventure"
+    },
+    {
+    "id": 16,
+    "name": "Animation"
+    }
+    ]
+}
+]
+}
