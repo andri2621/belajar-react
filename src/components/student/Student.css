@@ -1,4 +1,9 @@
 .kartu {
+    text-align: center;
+
+    /* align-items: center; */
+    /* display: inline-block; */
+  
     justify-content: center;
     background-color: transparent;
     position: relative;
@@ -39,6 +44,25 @@
             transform: scale(0.98);
 }
 
+/* .kartu:hover .detailSiswa {
+    padding-bottom: 50px;
+    opacity: 1;
+    transition: .5s;
+} */
+
+.kartu .vote {
+    color: white;
+    position: absolute;
+    text-decoration-line:none ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    margin-left: -40px;
+    margin-top: -20px;
+    text-shadow: 2px 2px 2px red;
+  
+}
 
 .kartu .detailSiswa {
     display: inline-flex;
@@ -48,13 +72,22 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
     padding: 10px 0;
     background: linear-gradient(to top, #000, transparent);
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 10px;
-    opacity: 1;
+    /* opacity: 0; */
+    /* transition: .5s; */
 
 }
+
+.detailSiswa h3 {
+    margin-block-start: auto;
+    margin-block-end: auto;
+    font-size: smaller;
+    text-shadow: 2px 2px 10px red;
+
+}
+

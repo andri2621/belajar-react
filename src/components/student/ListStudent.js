@@ -1,7 +1,11 @@
 import React, {Component} from 'react'
 import Student from './Student'
-import {StudentData} from './StudentData'
 import './ListStudent.css'
+import _ from 'lodash';
+import { getSkillDesc } from './studentskill'
+import {StudentData} from './StudentData'
+import {skills} from './StudentData';
+
 
 export default class ListStudent extends Component {
 
@@ -60,6 +64,11 @@ export default class ListStudent extends Component {
     };
 
 
+
+
+    
+
+
     render() {
         const {students, search, select, isSelected} = this.state
         return (
@@ -87,17 +96,24 @@ export default class ListStudent extends Component {
 
                     students
                     .filter( f =>  f.NAMA.toLowerCase().includes(search.toLowerCase()))
+                    // .filter( g =>  g.KOTA.toLowerCase().includes(search.toLowerCase()))
+
                     .sort((a, b) => b.VOTE - a.VOTE)
+                    
                     .map(value => {
+                        let SKILLS = getSkillDesc(value.SKILL);
                         return (
                             <Student
                                 NIM={value.NIM}
                                 NAMA={value.NAMA}
                                 KOTA={value.KOTA}
                                 IPK={value.IPK}
-                            onLike={this.handleLike}
-                            VOTE={value.VOTE}
                                 foto={value.foto}
+                                VOTE={value.VOTE}
+                                // SKILL={this.getSkillDesc}
+                                onLike={this.handleLike}
+
+                                SKILLS={SKILLS.join(',')}
                             />
                         )
                     }
@@ -126,16 +142,21 @@ export default class ListStudent extends Component {
                     // .sort((a, b) => b.VOTE - a.VOTE)
 
                     .map(value => {
+                        let SKILLS = getSkillDesc( value.SKILL);
+
                             return (
                                 <Student
                                     NIM={value.NIM}
                                     NAMA={value.NAMA}
                                     KOTA={value.KOTA}
                                     IPK={value.IPK}
-                                    onLike={this.handleLike}
-                                    VOTE={value.VOTE}
-
                                     foto={value.foto}
+                                    VOTE={value.VOTE}
+                                    // SKILL={getSkillDesc}
+
+                                    onLike={this.handleLike}
+
+                                    SKILLS={SKILLS.join(', ')}
                                 />
                             )
                         })
