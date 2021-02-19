@@ -43,9 +43,10 @@ export const SidebarMenu = [
     },
     {
         id: 7,
-        path: '/movieinfo',
-        name: 'MovieInfo',
+        path: '/category',
+        name: 'Category',
         exact: true,
         component: null
     }
 ]
+

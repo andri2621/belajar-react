@@ -1,6 +1,6 @@
 // import logo from './sharingan.png';
-import './App.css';
-import './styles/styles.css'
+// import './App.css';
+// import './styles/styles.css'
 import Counter from './components/Counter';
 import CounterArrow from './components/CounterArrow';
 import CounterHook from './components/CounterHook';

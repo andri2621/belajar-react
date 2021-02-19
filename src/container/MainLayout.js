@@ -19,6 +19,8 @@ import {MovieDescription} from '../components/movies/MovieDesc'
 // import MovieInfo from '../components/movieDetail/MovieInfo';
 // import CardMovie from '../components/movieDetail/CardMovie';
 
+import Category from '../crud/Category'
+
 
 const MainLayout = () => {
     return (
@@ -37,6 +39,8 @@ const MainLayout = () => {
                     <Route path="/movies/:id" component={MovieDescription} exact />
                     <Route path="/rating" component={RatingList} exact />
                     <Route path="/student" component={ListStudent} exact />
+                    <Route path="/category" component={Category} exact />
+
                     {/* <Route path="/movieinfo" component={CardMovie} exact /> */}
 
 
