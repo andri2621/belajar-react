@@ -33,12 +33,18 @@ export const SidebarMenu = [
         name: 'Rating',
         exact: true,
         component: null
-    }
-    ,
+    },
     {
         id: 6,
         path: '/student',
         name: 'Student',
+        exact: true,
+        component: null
+    },
+    {
+        id: 7,
+        path: '/movieinfo',
+        name: 'MovieInfo',
         exact: true,
         component: null
     }

@@ -14,6 +14,11 @@ import MovieList from '../components/movies/ListMovies'
 import RatingList from './rating/RatingList'
 import ListStudent from '../components/student/ListStudent';
 
+import {MovieDescription} from '../components/movies/MovieDesc'
+// import { Movies } from '../components/movieDetail/MoviesStyle';
+// import MovieInfo from '../components/movieDetail/MovieInfo';
+// import CardMovie from '../components/movieDetail/CardMovie';
+
 
 const MainLayout = () => {
     return (
@@ -29,8 +34,11 @@ const MainLayout = () => {
                     <Route path="/todo" component={Todo} exact />
                     <Route path="/home" component={Home} exact />
                     <Route path="/movies" component={MovieList} exact />
+                    <Route path="/movies/:id" component={MovieDescription} exact />
                     <Route path="/rating" component={RatingList} exact />
                     <Route path="/student" component={ListStudent} exact />
+                    {/* <Route path="/movieinfo" component={CardMovie} exact /> */}
+
 
                     {/* <Route path="/about" component={About} exact /> */}
                     <Route component={Error404} />
