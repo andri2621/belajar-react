@@ -11,7 +11,7 @@ export const TableCategory = props => {
                             <h3 class="font-semibold text-base text-gray-800">List category</h3>
                         </div>
                         <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-                            <button 
+                            <button onClick= {() => props.setShowModal(true) }
                                 class="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left"
                                 type="button">Add Region</button>
                         </div>
@@ -34,12 +34,16 @@ export const TableCategory = props => {
                                             <td className="text-center">{category.cate_id}</td>
                                             <td>{category.cate_name}</td>
                                             <td>
-                                                <button 
+                                                <button onClick= {() => {
+                                                    props.setEdit(category)
+                                                }}
                                                     className="text-blue-500 bg-transparent border border-solid border-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
                                                     Edit
                                     </button>
 
-                                                <button 
+                                                <button onClick = { () => {
+                                                    props.setDelete(category.cate_id)
+                                                }}
                                                     className="text-blue-500 bg-transparent border border-solid border-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
                                                     Delete
                                     </button>
